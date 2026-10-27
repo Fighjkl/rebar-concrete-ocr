@@ -1,0 +1,326 @@
+{
+  "document_aliases": {
+    "quality_certificate": [
+      "质量证明书",
+      "质保证书",
+      "质保书",
+      "材质证明",
+      "产品合格证",
+      "合格证书",
+      "QUALITY CERTIFICATE",
+      "CERTIFICATE NO",
+      "DATE OF ISSUE",
+      "BATCH NO",
+      "HEAT NO"
+    ],
+    "delivery_note": [
+      "送货单",
+      "发货单",
+      "供货单",
+      "送货通知"
+    ],
+    "nameplate": [
+      "材料名牌",
+      "材料铭牌",
+      "铭牌",
+      "炉批号",
+      "炉号",
+      "BATCH NO",
+      "BATCHNO",
+      "HEAT NO",
+      "PIECES/Wt",
+      "SIZE"
+    ],
+    "inspection_record": [
+      "材料构配件进场检验记录",
+      "材料、构配件进场检验记录",
+      "进场检验记录",
+      "检验记录"
+    ],
+    "approval_form": [
+      "工程材料、构配件、设备报审表",
+      "工程材料构配件设备报审表",
+      "材料报审表",
+      "报审表"
+    ]
+  },
+  "field_aliases": {
+    "certificate_no": [
+      "质量证明书编号",
+      "质保证书编号",
+      "质保书编号",
+      "证书编号",
+      "质编号",
+      "合格证号",
+      "合格证编号",
+      "CERTIFICATE NO",
+      "CERTIFICATE",
+      "QUALITY CERTIFICATE NO"
+    ],
+    "heat_lot_no": [
+      "炉批号",
+      "炉号",
+      "炉批",
+      "批号",
+      "批次号",
+      "轧制号",
+      "BATCH NO",
+      "BATCHNO",
+      "HEAT NO",
+      "HEATNO"
+    ],
+    "weight_t": [
+      "总重量",
+      "重量",
+      "净重",
+      "毛重",
+      "总理重",
+      "WEIGHT",
+      "TOTAL WEIGHT",
+      "PIECES/Wt",
+      "支数/重量",
+      "理重"
+    ],
+    "quantity_t": [
+      "进场数量",
+      "验收数量",
+      "供货数量",
+      "到货数量",
+      "数量",
+      "重量",
+      "重量（吨）",
+      "签收数量",
+      "QUANTITY",
+      "WEIGHT (T)"
+    ],
+    "diameter_mm": [
+      "钢筋规格",
+      "规格",
+      "直径",
+      "公称直径",
+      "规格/材质",
+      "SIZE",
+      "DIMENSION"
+    ],
+    "grade": [
+      "钢筋牌号",
+      "牌号",
+      "级别",
+      "品种规格",
+      "GRADE",
+      "STEEL GRADE"
+    ],
+    "manufacturer": [
+      "生产厂家",
+      "生产单位",
+      "生产厂",
+      "制造厂",
+      "厂家",
+      "产地",
+      "MANUFACTURER",
+      "FACTORY",
+      "PRODUCER"
+    ],
+    "supplier": [
+      "供应单位",
+      "供货单位",
+      "送货单位",
+      "提货单位",
+      "供应商"
+    ],
+    "supply_date": [
+      "发货日期",
+      "供货日期",
+      "送货日期",
+      "发货时间",
+      "DATE OF ISSUE",
+      "DATEOFISSUE",
+      "DATE OF DELIVERY",
+      "DATEOFDELIV"
+    ],
+    "inspection_date": [
+      "检验日期",
+      "验收日期",
+      "进场日期"
+    ],
+    "material_name": [
+      "材料名称",
+      "材料名",
+      "品名",
+      "货物名称"
+    ],
+    "usage_location": [
+      "使用部位",
+      "使用位置",
+      "施工部位",
+      "部位"
+    ],
+    "project_name": [
+      "工程名称",
+      "项目名称"
+    ]
+  },
+  "relations": {
+    "inspection_to_quality_certificate": {
+      "allowed_types": [
+        "quality_certificate"
+      ],
+      "primary_fields": [
+        "certificate_no"
+      ],
+      "weights": {
+        "certificate_no": 100,
+        "weight_t": 15,
+        "diameter_mm": 10,
+        "manufacturer": 10
+      },
+      "min_match_score": 100
+    },
+    "inspection_to_delivery_note": {
+      "allowed_types": [
+        "delivery_note"
+      ],
+      "primary_fields": [
+        "quantity_t"
+      ],
+      "weights": {
+        "quantity_t": 100,
+        "weight_t": 10,
+        "diameter_mm": 10,
+        "manufacturer": 10
+      },
+      "min_match_score": 100
+    },
+    "nameplate_to_quality_certificate": {
+      "allowed_types": [
+        "nameplate",
+        "delivery_note",
+        "unknown"
+      ],
+      "primary_fields": [
+        "heat_lot_no"
+      ]
+    },
+    "approval_to_inspection_record": {
+      "allowed_types": [
+        "approval_form",
+        "inspection_record"
+      ],
+      "primary_fields": [
+        "inspection_date"
+      ]
+    }
+  },
+  "fragmented_ocr": {
+    "enabled": true,
+    "tile_rows": 3,
+    "tile_cols": 2,
+    "upscale": 1.6,
+    "retry_mean_score": 0.75
+  },
+  "region_templates": {
+    "delivery_note": [
+      {
+        "name": "upper_half",
+        "x0": 0.0,
+        "y0": 0.0,
+        "x1": 1.0,
+        "y1": 0.52,
+        "upscale": 2.0
+      },
+      {
+        "name": "lower_half",
+        "x0": 0.0,
+        "y0": 0.48,
+        "x1": 1.0,
+        "y1": 1.0,
+        "upscale": 2.0
+      },
+      {
+        "name": "quantity_columns",
+        "x0": 0.48,
+        "y0": 0.12,
+        "x1": 0.82,
+        "y1": 0.48,
+        "upscale": 2.6
+      }
+    ],
+    "unknown": [],
+    "quality_certificate": [
+      {
+        "name": "identity_header",
+        "x0": 0.28,
+        "y0": 0.16,
+        "x1": 0.86,
+        "y1": 0.46,
+        "upscale": 2.8
+      },
+      {
+        "name": "table_identity",
+        "x0": 0.02,
+        "y0": 0.34,
+        "x1": 0.48,
+        "y1": 0.78,
+        "upscale": 2.5
+      },
+      {
+        "name": "full_form",
+        "x0": 0.03,
+        "y0": 0.03,
+        "x1": 0.97,
+        "y1": 0.97,
+        "upscale": 1.8
+      }
+    ],
+    "nameplate": [
+      {
+        "name": "identity_card",
+        "x0": 0.48,
+        "y0": 0.42,
+        "x1": 0.92,
+        "y1": 0.82,
+        "upscale": 3.0
+      },
+      {
+        "name": "full_form",
+        "x0": 0.05,
+        "y0": 0.05,
+        "x1": 0.95,
+        "y1": 0.95,
+        "upscale": 2.2
+      }
+    ]
+  },
+  "similar_words": {
+    "material_name": {
+      "热轧带肋钢筋": [
+        "热轧带肋钢筋",
+        "螺纹钢筋",
+        "带肋钢筋",
+        "钢筋"
+      ],
+      "盘螺": [
+        "盘螺",
+        "盘圆螺纹钢筋"
+      ]
+    },
+    "manufacturer": {
+      "浙江万泰特钢有限公司": [
+        "浙江万泰特钢有限公司",
+        "浙江万泰特钢",
+        "ZHEJIANGWANTAI ESPECIALLY STEEL CO.,LTD",
+        "ZHEJIANGWANTAIESPECIALLY STEELCO.,LTD"
+      ]
+    },
+    "document_type": {
+      "delivery_note": [
+        "送货单",
+        "发货单",
+        "供货单",
+        "存根",
+        "提货",
+        "结算"
+      ]
+    }
+  }
+}

@@ -1,0 +1,1021 @@
+{
+  "created_at_utc": "2026-10-27T02:32:06.191693+00:00",
+  "source_base_commit": "f79a640f83d8bfb173a10634b6c35ca1bc10b09d",
+  "source": "Current working files, including uncommitted runtime code",
+  "file_count": 251,
+  "total_bytes": 2361760,
+  "excluded": [
+    "Git history and remote configuration",
+    "PDFs, business spreadsheets, slides and scanned images",
+    "OCR text, checkpoints, ledgers, reports and databases",
+    "Model weights, model caches, virtualenvs and dependency caches",
+    "Test fixtures, development tests, experiments and local settings",
+    "Logs, build outputs, credentials and editor/agent settings"
+  ],
+  "files": {
+    ".gitattributes": {
+      "bytes": 90,
+      "sha256": "e878c72d73131bfe4bdc40a058fabf306240516a6ec35733a4a2fcfa09e3a4b7"
+    },
+    ".gitignore": {
+      "bytes": 1340,
+      "sha256": "ba993fd679008b4c720d040a50d01165375062cc348bc11f74cb5801a5645940"
+    },
+    "README.md": {
+      "bytes": 6198,
+      "sha256": "e99b3bdd63fc35d0c9f94d9aaf359c07ed77d13df69038db6a455490f99a312a"
+    },
+    "autodl_test_paddle_anchors.py": {
+      "bytes": 197,
+      "sha256": "2cb987038ab100590ee9921c39bee04f84dc6f492906ad508852b5fdcb7bdb8d"
+    },
+    "autodl_test_upstream.py": {
+      "bytes": 4046,
+      "sha256": "4cdb09c8d3460b7d5e0579c1b382e40a9b3dbc4752829c2147c99b3ac3978868"
+    },
+    "docs/DEPLOYMENT.md": {
+      "bytes": 3338,
+      "sha256": "174cc8176882a8c56e7c97a07905152565c51fea638c347fbc0b130e3437fe59"
+    },
+    "docs/MATERIAL_ROUTING.md": {
+      "bytes": 2506,
+      "sha256": "f2b9b9ec5e558ff5dc9619b07b775ed7855ff5c7ae6daafda2e663fb70a6a8bb"
+    },
+    "docs/MINIMAL_RELEASE.md": {
+      "bytes": 1534,
+      "sha256": "cf1ce9e29b1fead94b0cf2a988666e01ba4e2797810fd2120550501e5bcfb3df"
+    },
+    "no_entry_ocr/__init__.py": {
+      "bytes": 128,
+      "sha256": "84ff11047aebdde5765bc9efa7f8a0ef6ff838fab5510e00a155938d13dacf36"
+    },
+    "no_entry_ocr/extract.py": {
+      "bytes": 3224,
+      "sha256": "a117a607427fe3ba6f8bdcd4e769326f48908ee657c3ac97490093b9c0128490"
+    },
+    "no_entry_ocr/parsers.py": {
+      "bytes": 11224,
+      "sha256": "7417c577fb0f4633ee8ccb034a33ea573811f6db316bc33918241076f1835af7"
+    },
+    "no_entry_ocr/pipeline.py": {
+      "bytes": 18751,
+      "sha256": "277a8469807db02222d72a348170b71b85cc8df5d045e3fbcd68b06cb3b9eb2e"
+    },
+    "prepare_autodl.py": {
+      "bytes": 3788,
+      "sha256": "f2012632044242072fda3e922582547ab5d6daf515730426f27f336960b1f939"
+    },
+    "pyproject.toml": {
+      "bytes": 986,
+      "sha256": "72ade913d4d7b837b3491d2e627dc835d18d75d3283cba907a70ce714781f8d5"
+    },
+    "requirements-glm.txt": {
+      "bytes": 241,
+      "sha256": "637aa766e8b90b3abf980c521f785e620188b37ab43001c6962a774ba5d83608"
+    },
+    "requirements.txt": {
+      "bytes": 207,
+      "sha256": "14a420727cf5dc936f4b82780ce3e0cbc0e142756cfb157149fb6d2be60c3411"
+    },
+    "scripts/prepare-github-release.py": {
+      "bytes": 4236,
+      "sha256": "ef47ce7e49eb8515a041703703e5940cfe3245d7609fe842095f8a6b665128e4"
+    },
+    "scripts/run-paddle-anchors-test.sh": {
+      "bytes": 722,
+      "sha256": "b832d6408d3b5f8aee6f99c6b94093a3799b06cde6bcb920abddc43c27700b3c"
+    },
+    "src/material_ocr/__init__.py": {
+      "bytes": 109,
+      "sha256": "51b15e88a313092c76da33bb06ef7d79893bcbce69c75cdfe59b710b89b945eb"
+    },
+    "src/material_ocr/__main__.py": {
+      "bytes": 63,
+      "sha256": "b2c15fc779d50332cb8942a448f70fcc9115a73f920dae754d8fbc9e04ae2343"
+    },
+    "src/material_ocr/anchor_v3/__init__.py": {
+      "bytes": 70,
+      "sha256": "ebff6e041c51a5dc75fd735982d73b73737e506ebb2fe8a90f90441ed5a15309"
+    },
+    "src/material_ocr/anchor_v3/config.json": {
+      "bytes": 150,
+      "sha256": "0b75c450b6ffc12f22e313fca40b1f8c987619eec32b10ed150c23e549354f24"
+    },
+    "src/material_ocr/anchor_v3/matcher.py": {
+      "bytes": 29190,
+      "sha256": "e91d2b26bfcb64076f76b19a8984bc14ab27fd3ff8703e949290313f1044a0fe"
+    },
+    "src/material_ocr/anchor_v3/report.py": {
+      "bytes": 12341,
+      "sha256": "efbcf260730df595e3e8eb80de5368d5a072cc656ea109e0c94ef11b2e4df649"
+    },
+    "src/material_ocr/attachment_legacy/__init__.py": {
+      "bytes": 84,
+      "sha256": "8ea6a53eb1cfc473ea89827da1a082316d1d8c0b76d56f6cd6c018b9bdf9278f"
+    },
+    "src/material_ocr/attachment_legacy/attachment_rules.json": {
+      "bytes": 6703,
+      "sha256": "62b3b86771ea9ab1a787df780b47bc36218ded769d63102e38a7f6db0c99c8cf"
+    },
+    "src/material_ocr/attachment_legacy/attachments.py": {
+      "bytes": 75175,
+      "sha256": "cf2f5bd6e5c2683b969d52bd35fc81ee89d95a30535750c244f66893ea025e4f"
+    },
+    "src/material_ocr/attachment_legacy/certificate.py": {
+      "bytes": 4445,
+      "sha256": "7238a528d167f5814be30bfab77ec85eca9d5c9ce07d768d6610815cdbce530a"
+    },
+    "src/material_ocr/attachment_legacy/layout.py": {
+      "bytes": 14600,
+      "sha256": "4fc218e262a535597ce3412428001404eede40fee7efeba6a3c071fcce473fca"
+    },
+    "src/material_ocr/cli.py": {
+      "bytes": 4191,
+      "sha256": "68860febaf71e8cb409be6a61a22308382a872267e5a70ec8aa11917e66e6a3a"
+    },
+    "src/material_ocr/extraction/__init__.py": {
+      "bytes": 58,
+      "sha256": "c57aadef7985123b352e82a20ccc3795cd3d11b7f4eb2be98787c0ef04e3d014"
+    },
+    "src/material_ocr/extraction/adaptive.py": {
+      "bytes": 14206,
+      "sha256": "a7564ca9fc2775362f826f6c9b7a5fe1d2e16c6ba151379ea8b529593c579a33"
+    },
+    "src/material_ocr/extraction/alignment.py": {
+      "bytes": 4641,
+      "sha256": "eebcfed6392710b15fcbb1a50b86b3cd27887297415fdf49d9edb465b6242229"
+    },
+    "src/material_ocr/extraction/batch.py": {
+      "bytes": 20940,
+      "sha256": "37e83bde0ac13cdc2b1ce61fd4ac2cd2fa4e7b984a3af2545f4844b5e11b3910"
+    },
+    "src/material_ocr/extraction/blank_rows.py": {
+      "bytes": 1877,
+      "sha256": "3d15fbef84f4374b868a9c504f64f030856ba203dbb422f8105c7389d34fe332"
+    },
+    "src/material_ocr/extraction/row_retry.py": {
+      "bytes": 5078,
+      "sha256": "40dc62e70f475c241ce3cf39c00e4f2133763ab1ec89997e34be1ee5e240d980"
+    },
+    "src/material_ocr/extraction/table.py": {
+      "bytes": 21031,
+      "sha256": "f9c298fd490a0b40513097d2b1cf43fe0e7bb16eec68b0e6a5464a72f6fc3c23"
+    },
+    "src/material_ocr/extraction/table_model_config.py": {
+      "bytes": 1689,
+      "sha256": "df06e593601cd1617ac06463af3a726611600ddec31d8f7f9f03e05198e30e2f"
+    },
+    "src/material_ocr/filling/__init__.py": {
+      "bytes": 74,
+      "sha256": "19a160a9ad6516f98ea41a8606b25c1370f03e604fd4f1a0000507d16d30de09"
+    },
+    "src/material_ocr/filling/base.py": {
+      "bytes": 585,
+      "sha256": "32e3faf4ccb84be137318f2d6b77e965763bf5e5961bd742c39760d7fc863aec"
+    },
+    "src/material_ocr/filling/excel.py": {
+      "bytes": 6690,
+      "sha256": "3762e9c1e724a18e7cd1224091f0a681a0f3aa4ff864fc995dc05ed37d9c487b"
+    },
+    "src/material_ocr/filling/ledger.py": {
+      "bytes": 10561,
+      "sha256": "a26bdf85087268a3608951e0e1cd2427ad5d72432f83fc3d0dbaff095b95b2c0"
+    },
+    "src/material_ocr/matching/__init__.py": {
+      "bytes": 62,
+      "sha256": "20606c3e148f90575471d483c34d2af66f02a995ef06ba9d9f6425d08e9cbfc9"
+    },
+    "src/material_ocr/matching/catalog.py": {
+      "bytes": 46615,
+      "sha256": "1f3dfa949f824aeadc73c3d1fe41a382b7a77c214d23cb679719ae43adb9ea91"
+    },
+    "src/material_ocr/materials/__init__.py": {
+      "bytes": 79,
+      "sha256": "d9d470540ac523be31e304a2e7f5276ff0ea84526758bef22e88450ee175cd04"
+    },
+    "src/material_ocr/materials/base.py": {
+      "bytes": 1785,
+      "sha256": "badd8d4cd3c45971c735c075d5d29c66bc98a843c9b7d533ca30e2c1731438db"
+    },
+    "src/material_ocr/materials/concrete/__init__.py": {
+      "bytes": 74,
+      "sha256": "c06c9a4709d2adb54500ee601f79afbddb284519a96acf0b8e73f871e7dbac33"
+    },
+    "src/material_ocr/materials/concrete/entry_duplicates.py": {
+      "bytes": 5093,
+      "sha256": "c5bcab2d1f2946f5d832448089d78e5850eb2ee198b7dbf0dabf965b2ac8f195"
+    },
+    "src/material_ocr/materials/concrete/extraction.py": {
+      "bytes": 17043,
+      "sha256": "a70eca5eb82a439f166c5833b7a631d264c98fd7d5ba47fc4407b698d72ec76c"
+    },
+    "src/material_ocr/materials/concrete/matching.py": {
+      "bytes": 73355,
+      "sha256": "2a6d5f83a3d2430725977c77b5775052aa7efdc8be4713cd54f14377456db0d8"
+    },
+    "src/material_ocr/materials/concrete/pipeline.py": {
+      "bytes": 19379,
+      "sha256": "442fd59b45079f2af2a425e68d450aef82c2004739fb001d7c584c07fad83d34"
+    },
+    "src/material_ocr/materials/concrete/routing.py": {
+      "bytes": 7345,
+      "sha256": "40c470ba39d00dda40f724af3cfed359fe38ffcf3a4c23f1cca8ab5a0d3761e3"
+    },
+    "src/material_ocr/materials/concrete/submission_number.py": {
+      "bytes": 6194,
+      "sha256": "ea49902b2a8891613dcfca6d98112fb74150eb60ee77494b46345b2112f0bed0"
+    },
+    "src/material_ocr/materials/concrete/upstream_worker.py": {
+      "bytes": 3111,
+      "sha256": "4dc9c942273fb89c71b02e874968a39558030f05b666a466d3506bd7c1e05efc"
+    },
+    "src/material_ocr/materials/examples/concrete.json": {
+      "bytes": 391,
+      "sha256": "b5fe1de56dea3bdb41b5313e8d0b0c9645b13a6b1e036d99a0bca3c55670d37c"
+    },
+    "src/material_ocr/materials/examples/steel_beam.json": {
+      "bytes": 382,
+      "sha256": "1e55a90768dd92b0204cf95b7b19b66d2bef85d1b4768ce5efa8323cc5cac71b"
+    },
+    "src/material_ocr/materials/rebar/__init__.py": {
+      "bytes": 82,
+      "sha256": "fa7e7ba115717b8632f8f609b2c46f6efcca48af1eba99747b2687e33954d53f"
+    },
+    "src/material_ocr/materials/rebar/adapter.py": {
+      "bytes": 9800,
+      "sha256": "2e17636d0a5d4b5d897a6cdf8d5e95ea88f7de324a3c1b5e91ca1b1b68470661"
+    },
+    "src/material_ocr/materials/rebar/automatic.py": {
+      "bytes": 59275,
+      "sha256": "5de06dc06330526325e8b2706271f1342882bc722ffb6315bb5d517aa0bf640c"
+    },
+    "src/material_ocr/materials/rebar/company_ledger.py": {
+      "bytes": 5573,
+      "sha256": "78bbe407d2fbd1d409d6b6cf7e1ab4e3d1b672d0ec69757688bf238014979846"
+    },
+    "src/material_ocr/materials/rebar/confidence.py": {
+      "bytes": 3542,
+      "sha256": "8d940f318335d03fb2cbb1c5930bd34d8a1cc0f7c2f5e375c47ed296cbbaef93"
+    },
+    "src/material_ocr/materials/rebar/config/attachment_rules.json": {
+      "bytes": 6703,
+      "sha256": "62b3b86771ea9ab1a787df780b47bc36218ded769d63102e38a7f6db0c99c8cf"
+    },
+    "src/material_ocr/materials/rebar/config/entry_confidence.json": {
+      "bytes": 503,
+      "sha256": "0a418d88e19979a61572251ec848936ea11b35cefd761f1690eef99a37a38126"
+    },
+    "src/material_ocr/materials/rebar/config/inspection_11_rows.json": {
+      "bytes": 860,
+      "sha256": "10ad709898011573929f921103feebbcd4423033b9e0cc9eca0f942cf067304f"
+    },
+    "src/material_ocr/materials/rebar/config/inspection_6_rows.json": {
+      "bytes": 904,
+      "sha256": "8d8e5e864d7fd2ab883bda5e73726a8816c5aa41a0f318b5ee1c82ed1d9682e0"
+    },
+    "src/material_ocr/materials/rebar/config/material.json": {
+      "bytes": 446,
+      "sha256": "34a7846164bd28e5f570d97f9b703d9aea00169ecca41f12e2ef971da4bce273"
+    },
+    "src/material_ocr/materials/rebar/config/submission_b06.json": {
+      "bytes": 951,
+      "sha256": "8e183f1c1274360382ff40b0fb8a0694aab3033180289f22f118b0f50e8363a7"
+    },
+    "src/material_ocr/materials/rebar/coordinate_match.py": {
+      "bytes": 44835,
+      "sha256": "5415b5aad34805c4039120dfd35ce75b28b916b519413c2091b3ade1331917ee"
+    },
+    "src/material_ocr/materials/rebar/delivery_resources.py": {
+      "bytes": 13545,
+      "sha256": "d0d37e48174dc380d9408871b3288c0e951f39b6bd861de4c3fc8e21521e8a04"
+    },
+    "src/material_ocr/materials/rebar/draft_completion.py": {
+      "bytes": 9710,
+      "sha256": "e117aedc7b3a1fde693a1949179203b39824930fbfe4657353bc152eb6472781"
+    },
+    "src/material_ocr/materials/rebar/draft_report.py": {
+      "bytes": 2603,
+      "sha256": "b96114c51a3f898d639b347898cde3e6560830a9085d4e70c4f29e0fce1f565f"
+    },
+    "src/material_ocr/materials/rebar/entry_duplicates.py": {
+      "bytes": 11858,
+      "sha256": "2a4409f21ac6975fcfc631b8a8b35ab5343df5b6aee21d7a058ec5c675db6b4d"
+    },
+    "src/material_ocr/materials/rebar/entry_schema.py": {
+      "bytes": 1987,
+      "sha256": "eaf7bd73df2ca811992e31767ec3fe5acd5eebbee5d19fbf4a8606dba730b1c0"
+    },
+    "src/material_ocr/materials/rebar/filling.py": {
+      "bytes": 63577,
+      "sha256": "83dd262207432dd210d49478c75314c0b66f2202f0b40f13e4ef02279caffe47"
+    },
+    "src/material_ocr/materials/rebar/glm_attachment_recovery.py": {
+      "bytes": 6708,
+      "sha256": "69dd24d7477687c6cc17e44436e81cc41bf653e12fa396456995acf848aee868"
+    },
+    "src/material_ocr/materials/rebar/glm_entry_bridge.py": {
+      "bytes": 21826,
+      "sha256": "c84d32646adb5ec754e000cc204a21bfd49c189c0938ed1b301b5562d54c94c4"
+    },
+    "src/material_ocr/materials/rebar/glm_experiment.py": {
+      "bytes": 93802,
+      "sha256": "3d0f988c302dc5a4ba272e9212fd2900ac70e6328b0aa7af09f60f49e8829132"
+    },
+    "src/material_ocr/materials/rebar/glm_production.py": {
+      "bytes": 70685,
+      "sha256": "cd8fea3963afce29318d9b4a9d7ab0b4494ad5fe343e9f351716134ff385978e"
+    },
+    "src/material_ocr/materials/rebar/glm_supplement.py": {
+      "bytes": 36166,
+      "sha256": "b6d140fe857216756b40af38774bd2a0203410737c6b10fa2139db9a03e233b7"
+    },
+    "src/material_ocr/materials/rebar/glm_web_contract.py": {
+      "bytes": 7413,
+      "sha256": "cd18ccbf3852e895f80c2522d8a8f86e2bcac5afb73fb549954fc8860e54cdd0"
+    },
+    "src/material_ocr/materials/rebar/heat_review.py": {
+      "bytes": 1738,
+      "sha256": "4826a748c9ebf8cd62eeb09e5f1c65dac922230f1b2d3ff21273af71bacc1bcd"
+    },
+    "src/material_ocr/materials/rebar/ledger_sources.py": {
+      "bytes": 7412,
+      "sha256": "38e9b96452c553fd6e3676d6e51335379c024a05be3c8def4e5bcaf6ebd677fd"
+    },
+    "src/material_ocr/materials/rebar/matching.py": {
+      "bytes": 47310,
+      "sha256": "b68c30995dafdd0beaefd9610b7fdab1116c44cd2d764007a2fd54ca4cfacfce"
+    },
+    "src/material_ocr/materials/rebar/multiform_drafts.py": {
+      "bytes": 21899,
+      "sha256": "31475cd23dd7415fdc2ac99edba9dd4351a4a66e4eb90358f07a01de89106637"
+    },
+    "src/material_ocr/materials/rebar/multiform_resources.py": {
+      "bytes": 16947,
+      "sha256": "b50f7c74b82a06897d5e82c4bf521212da444ca44e745e43334244c4149d1197"
+    },
+    "src/material_ocr/materials/rebar/nameplate_resources.py": {
+      "bytes": 9109,
+      "sha256": "4722f99ed5796e643efcd4af14b7efafcdfb50d59903b198d2bf512f0f75149f"
+    },
+    "src/material_ocr/materials/rebar/no_entry_pipeline.py": {
+      "bytes": 9030,
+      "sha256": "a9d6f93617a74a73a96b287721e3d2967f8d73f47c7f1ff3aff3677131d6eacc"
+    },
+    "src/material_ocr/materials/rebar/paddle_anchor_recovery.py": {
+      "bytes": 7910,
+      "sha256": "ddbb06e3260bda0291ff891713d1451886b3fa327f092c3052df46a03827d423"
+    },
+    "src/material_ocr/materials/rebar/paddle_attachment_detail.py": {
+      "bytes": 4718,
+      "sha256": "b0d2a779c257df94f245377267eee37aed5ac025a4ec47da455ce835e1146a2a"
+    },
+    "src/material_ocr/materials/rebar/paddle_attachment_orientation.py": {
+      "bytes": 4698,
+      "sha256": "aa7a73da4832798f0c927976ff1dcffccf63597cc4c4e39f906323496b2b5f9d"
+    },
+    "src/material_ocr/materials/rebar/paddle_attachment_resources.py": {
+      "bytes": 9926,
+      "sha256": "723d688ba3b5d69396486c454757a34f9b4172e1685e2a4561b44843c9c91c53"
+    },
+    "src/material_ocr/materials/rebar/paddle_attachments.py": {
+      "bytes": 18438,
+      "sha256": "6473ae8c294395ada0023f1d94f0cae57aafe37a6f696771f486bba846191a0e"
+    },
+    "src/material_ocr/materials/rebar/paddle_delivery_number.py": {
+      "bytes": 3326,
+      "sha256": "9a2f410007282c38dc96c54a2e81f8cf14b9fc93a4cda8f03272f9f92779ffd5"
+    },
+    "src/material_ocr/materials/rebar/paddle_delivery_view.py": {
+      "bytes": 4784,
+      "sha256": "187c750e7f89e25f8b1e1bda89731226c498f9a9136083d453644b0085ee7db8"
+    },
+    "src/material_ocr/materials/rebar/paddle_spatial_resources.py": {
+      "bytes": 19524,
+      "sha256": "09c67498c2abcea4b83d2c7f9ecce288c82ec2d119d4ef4f066fc719d9a1326c"
+    },
+    "src/material_ocr/materials/rebar/parsing.py": {
+      "bytes": 2434,
+      "sha256": "73a732ead96abb48db83374256a80d67910c88e4c0cc20daa33ed7c5d82d09e2"
+    },
+    "src/material_ocr/materials/rebar/quantity_list.py": {
+      "bytes": 9292,
+      "sha256": "ebdf6899bf3489b8585aa4d605dedbdf5052ecfe625e14a27ea4c303f64c193c"
+    },
+    "src/material_ocr/materials/rebar/review.py": {
+      "bytes": 25499,
+      "sha256": "078764eae973b77882c2b024e39c7a429323f39d2daa94a35809840f45e51a72"
+    },
+    "src/material_ocr/materials/rebar/review_policy.py": {
+      "bytes": 5635,
+      "sha256": "5f070b750ae5a76489948a0281beadaa8c583c3afe917caeb57d9bfa1e0c4360"
+    },
+    "src/material_ocr/materials/rebar/routing.py": {
+      "bytes": 6356,
+      "sha256": "45f02244f14b99f35da7b5470401c094281c206070f1e71741112791c04ac0c2"
+    },
+    "src/material_ocr/materials/rebar/specification_ledger.py": {
+      "bytes": 4105,
+      "sha256": "9b06387091fcbc15a5e05b5ceedf302f5e9a4b40ba32d689ae80939ca63c2502"
+    },
+    "src/material_ocr/materials/rebar/submission.py": {
+      "bytes": 17929,
+      "sha256": "0518221be854aa0c6095bacca9b0d9494474d8127cf72140e29d5965c7bd5746"
+    },
+    "src/material_ocr/materials/rebar/submission_duplicates.py": {
+      "bytes": 4173,
+      "sha256": "5784165a8e5a3e601ae1e0cfbd615c96213e718958531eb30bf2ec80e8ef2a2b"
+    },
+    "src/material_ocr/materials/rebar/submission_ledger.py": {
+      "bytes": 3579,
+      "sha256": "506c65edb634f5b728fd81572f55ece82288b370c900c1ea560739df045ba434"
+    },
+    "src/material_ocr/materials/rebar/upstream_adapter.py": {
+      "bytes": 5303,
+      "sha256": "5c9db776f2fd7ba71ac3300b9b4c491c612fd6b1919751a1b94abe473bbfa32f"
+    },
+    "src/material_ocr/materials/rebar/upstream_pipeline.py": {
+      "bytes": 15900,
+      "sha256": "621968a87c1ba7bf46f6f9960f8e874263b400f615c99974c64ba58df63faa8b"
+    },
+    "src/material_ocr/materials/rebar/upstream_recovery.py": {
+      "bytes": 12306,
+      "sha256": "ea21f7085cf1bb42aca8433ca24a26a288e041d65e323529c9ba8f554caa1d71"
+    },
+    "src/material_ocr/materials/rebar/upstream_worker.py": {
+      "bytes": 1009,
+      "sha256": "af4b53c96eced4e53cec869c2a67674be3aeaab0168fd64e11ab2aff53ed9b94"
+    },
+    "src/material_ocr/materials/rebar/validation.py": {
+      "bytes": 1441,
+      "sha256": "fa02276607d66358d1faeb352573ca2b490ddf2930a5d875af5ffc2583d66d55"
+    },
+    "src/material_ocr/materials/registry.py": {
+      "bytes": 1525,
+      "sha256": "c5a406406cd0db248b8c6dfd889270e9bfbb211269a3bbb7e55fb3270bf37799"
+    },
+    "src/material_ocr/ocr/__init__.py": {
+      "bytes": 58,
+      "sha256": "7356554b8dc5038e1ddc0aea87b37e4a06dd4904f5bba9839e9882f4865daa8b"
+    },
+    "src/material_ocr/ocr/attachments.py": {
+      "bytes": 76861,
+      "sha256": "7c8f5e8eb7adc1f82aae9e272e7dfc611e0142c598f62b9988a70013d31e4e6a"
+    },
+    "src/material_ocr/ocr/backends.py": {
+      "bytes": 3077,
+      "sha256": "32ecd09c6a342d0a784f372541f46c8c54b3ee835ceb171db62e18c5c81d5fdd"
+    },
+    "src/material_ocr/ocr/cell.py": {
+      "bytes": 4329,
+      "sha256": "cbd3a2417fa54d0c8cfbc9a3aa677ecb30d9d4b0cb2f566d9308371c4a96d660"
+    },
+    "src/material_ocr/ocr/crop_fusion.py": {
+      "bytes": 14975,
+      "sha256": "400363a687cb5451f7f522924dc22bb316aad14ca0c2c0b506e776c7249335ae"
+    },
+    "src/material_ocr/ocr/glm.py": {
+      "bytes": 6304,
+      "sha256": "6e27a3f8b7f736e6fb356fb33eb43ee7b1faadb6e53c5cc150fa4bf2f0d91298"
+    },
+    "src/material_ocr/ocr/glm_geometry.py": {
+      "bytes": 17113,
+      "sha256": "894fa8a08b20c2041bf9f11a47a618d14a9db7b47e812541e83b32d076711b23"
+    },
+    "src/material_ocr/ocr/glm_table_geometry.py": {
+      "bytes": 20890,
+      "sha256": "f025dcd188f8fd3547596cf9e72194a861b4ca96ba54934ccb6ef4d437de7137"
+    },
+    "src/material_ocr/ocr/glm_tables.py": {
+      "bytes": 6177,
+      "sha256": "2b590311cee22932df56efe232a0b1ebb196be68614016216fbe12397cadcfc2"
+    },
+    "src/material_ocr/ocr/layout.py": {
+      "bytes": 14600,
+      "sha256": "4fc218e262a535597ce3412428001404eede40fee7efeba6a3c071fcce473fca"
+    },
+    "src/material_ocr/ocr/nameplates.py": {
+      "bytes": 6307,
+      "sha256": "910271c7027e004cbb09547f3d109c0b4324c9a1bc3e676ba196b6a42700ebf3"
+    },
+    "src/material_ocr/ocr/orientation.py": {
+      "bytes": 1299,
+      "sha256": "fb0fcc752739c653389a03917ac28bfdb5d21ef8b7a606efa48f8648d31c2554"
+    },
+    "src/material_ocr/ocr/paddle_native.py": {
+      "bytes": 5207,
+      "sha256": "04ecfa9729b1e1161ccfe1f5830dd18b998e1b60cdfaf04827dfca0112a1caef"
+    },
+    "src/material_ocr/paths.py": {
+      "bytes": 365,
+      "sha256": "e2c04776b4266215a6ac888aae29ad8160cd1b59f830521cbe9a0c8c1296d67c"
+    },
+    "src/material_ocr/pdf_runtime.py": {
+      "bytes": 141,
+      "sha256": "bc748d183d00c5379d410e80ba6313e4f3eaf76fde04975075fa49d6e375a62b"
+    },
+    "src/material_ocr/processes.py": {
+      "bytes": 830,
+      "sha256": "671fa9181426f8557fb826b330b02a3e381f3a43bfda79bb39fe7155b7a9fbd7"
+    },
+    "src/material_ocr/review/__init__.py": {
+      "bytes": 79,
+      "sha256": "8ba6f24bea9e48d9b0dc70c2e2fda43061ba31acce2be2c58f59a2a8bb3cc5ab"
+    },
+    "src/material_ocr/review/associations.py": {
+      "bytes": 5686,
+      "sha256": "4fa45c9904d851170446f1f71053d07375a3fd9797029e193083136970078123"
+    },
+    "src/material_ocr/review/filling_ui.js": {
+      "bytes": 9015,
+      "sha256": "42f9496820ddf8eb7576acae42149ab269a231a70d51a7eb845ffd1ee403bbf0"
+    },
+    "src/material_ocr/review/images.py": {
+      "bytes": 6717,
+      "sha256": "93d1377f5a4690164639a969f607305129484890832db9f111841e9a307fda7a"
+    },
+    "src/material_ocr/review/render.py": {
+      "bytes": 7634,
+      "sha256": "a1d306d243b4d2584227a7e994a20b5a2b5aeb41e811b33439fa0cee1cc91b37"
+    },
+    "src/material_ocr/review/review_state.js": {
+      "bytes": 5945,
+      "sha256": "cd610476b4f6bf2f487576706813ee6d3751daabe16b4130858c0a96433fb71f"
+    },
+    "src/material_ocr/review/review_ui.js": {
+      "bytes": 14477,
+      "sha256": "c72d966dec9b51fd4bdb4f895ba907e10c5aeb1f3ec2fba9b1f87a5e698fd53c"
+    },
+    "src/material_ocr/review/templates/same_page.html": {
+      "bytes": 7687,
+      "sha256": "f17bfda714881a5812f64186ba864631b8e7ffcb97f50170e022b78e6cd47470"
+    },
+    "src/material_ocr/storage_artifacts.py": {
+      "bytes": 9536,
+      "sha256": "efe6063a5c5c769c006ec9f7f42d108c3143f589ac1ce50bdc228b61f3c51d62"
+    },
+    "src/material_ocr/upstream_legacy/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "src/material_ocr/upstream_legacy/extraction/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "src/material_ocr/upstream_legacy/extraction/_glm_runner.py": {
+      "bytes": 4592,
+      "sha256": "924f2fd699792d03d48032b9d346af69b05c21840538c7065b4f00fd06121ee2"
+    },
+    "src/material_ocr/upstream_legacy/extraction/adaptive.py": {
+      "bytes": 13595,
+      "sha256": "10beef27f404aaf22a7e42994eb7acc6f632bd16f5b0e43ee46ced671b4c9364"
+    },
+    "src/material_ocr/upstream_legacy/extraction/alignment.py": {
+      "bytes": 4641,
+      "sha256": "eebcfed6392710b15fcbb1a50b86b3cd27887297415fdf49d9edb465b6242229"
+    },
+    "src/material_ocr/upstream_legacy/extraction/batch.py": {
+      "bytes": 21980,
+      "sha256": "2f18bc94331e6360800d3cbf4397b3ac5b722b1a7ecf0a28eb9d1537bd2b255f"
+    },
+    "src/material_ocr/upstream_legacy/extraction/blank_rows.py": {
+      "bytes": 1877,
+      "sha256": "3d15fbef84f4374b868a9c504f64f030856ba203dbb422f8105c7389d34fe332"
+    },
+    "src/material_ocr/upstream_legacy/extraction/glm_backend.py": {
+      "bytes": 7080,
+      "sha256": "edc61adb29d2e4c248d889c20d0510f6831b0f9e5e0f6ba17cbcba3e322a23f0"
+    },
+    "src/material_ocr/upstream_legacy/extraction/glm_blank_stop.py": {
+      "bytes": 4732,
+      "sha256": "f36c066905d806b1fa256a8f40a93025648838a2b2a686b06dc500e5ba1900b2"
+    },
+    "src/material_ocr/upstream_legacy/extraction/glm_table.py": {
+      "bytes": 16698,
+      "sha256": "642f164fe20514861f786d6751dc011ff1e4200ea655979860743b6918078743"
+    },
+    "src/material_ocr/upstream_legacy/extraction/row_retry.py": {
+      "bytes": 5094,
+      "sha256": "4f0dfd0acb5bc343b36b9f0dcc2126efe6a159afc6c17cbb14a29d34e39eeb6f"
+    },
+    "src/material_ocr/upstream_legacy/extraction/table.py": {
+      "bytes": 21175,
+      "sha256": "2e71421fe01a2643687af2d3db14bdc21a0829a8e8116bc6000213076c253edd"
+    },
+    "src/material_ocr/upstream_legacy/extraction/table_model_config.py": {
+      "bytes": 1658,
+      "sha256": "5755592caa31614e9a01d5bd7722f9f87e737214bf2bd521947c824183b10b51"
+    },
+    "src/material_ocr/upstream_legacy/materials/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "src/material_ocr/upstream_legacy/materials/rebar/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "src/material_ocr/upstream_legacy/materials/rebar/confidence.py": {
+      "bytes": 3507,
+      "sha256": "5e9470ffec59eefd352c747689809af485fdc9d8f54bf0572964ddc7b362e92f"
+    },
+    "src/material_ocr/upstream_legacy/materials/rebar/config/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "src/material_ocr/upstream_legacy/materials/rebar/config/attachment_rules.json": {
+      "bytes": 6703,
+      "sha256": "62b3b86771ea9ab1a787df780b47bc36218ded769d63102e38a7f6db0c99c8cf"
+    },
+    "src/material_ocr/upstream_legacy/materials/rebar/config/entry_confidence.json": {
+      "bytes": 493,
+      "sha256": "f21532b358c9008ad54744ba1c5abd4414ae0003693e392a101ab23e5662c2bf"
+    },
+    "src/material_ocr/upstream_legacy/materials/rebar/config/inspection_11_rows.json": {
+      "bytes": 860,
+      "sha256": "10ad709898011573929f921103feebbcd4423033b9e0cc9eca0f942cf067304f"
+    },
+    "src/material_ocr/upstream_legacy/materials/rebar/config/inspection_6_rows.json": {
+      "bytes": 904,
+      "sha256": "8d8e5e864d7fd2ab883bda5e73726a8816c5aa41a0f318b5ee1c82ed1d9682e0"
+    },
+    "src/material_ocr/upstream_legacy/materials/rebar/config/material.json": {
+      "bytes": 480,
+      "sha256": "2a9decf5bf4e3aad66dc8bfd5a0322cfeffc0df74042de4782e5ff9ba0813d5b"
+    },
+    "src/material_ocr/upstream_legacy/materials/rebar/config/submission_b06.json": {
+      "bytes": 921,
+      "sha256": "f2499cb55c0896b8488ad547505371bc23400170f3fa2044e9047809fc4ebcfa"
+    },
+    "src/material_ocr/upstream_legacy/materials/rebar/coordinate_match.py": {
+      "bytes": 43744,
+      "sha256": "4653f8864ef1386cbfbe59db65a7d1cae86435f717730680bc63c0faa3f31f09"
+    },
+    "src/material_ocr/upstream_legacy/materials/rebar/entry_schema.py": {
+      "bytes": 2953,
+      "sha256": "015ed7e534637e036c283b181d3040bcdea3f8ce31de6c07be9ddf3fadec3653"
+    },
+    "src/material_ocr/upstream_legacy/materials/rebar/parsing.py": {
+      "bytes": 2434,
+      "sha256": "73a732ead96abb48db83374256a80d67910c88e4c0cc20daa33ed7c5d82d09e2"
+    },
+    "src/material_ocr/upstream_legacy/materials/rebar/routing.py": {
+      "bytes": 6372,
+      "sha256": "e93e2daee76cc55ec3f1bde1cbc2c751fa94021033a98ef038f671e8c300b826"
+    },
+    "src/material_ocr/upstream_legacy/materials/rebar/submission.py": {
+      "bytes": 18270,
+      "sha256": "cc642ebd56903c37a21f192d86afba057b4bb2d86e29097fd6343c75fdd2d704"
+    },
+    "src/material_ocr/upstream_legacy/materials/rebar/submission_duplicates.py": {
+      "bytes": 4108,
+      "sha256": "41301f99f5e2168f5c4547bda7d8aa82e12c4d30fbdd45d6bbc16879755f5fba"
+    },
+    "src/material_ocr/upstream_legacy/materials/rebar/submission_layout_recovery.py": {
+      "bytes": 2374,
+      "sha256": "261b0c0677d151f3b923839ccf6a93c30248c7e667a4e7a1fa39b20989024258"
+    },
+    "src/material_ocr/upstream_legacy/materials/rebar/validation.py": {
+      "bytes": 1441,
+      "sha256": "fa02276607d66358d1faeb352573ca2b490ddf2930a5d875af5ffc2583d66d55"
+    },
+    "src/material_ocr/upstream_legacy/ocr/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "src/material_ocr/upstream_legacy/ocr/cell.py": {
+      "bytes": 4329,
+      "sha256": "cbd3a2417fa54d0c8cfbc9a3aa677ecb30d9d4b0cb2f566d9308371c4a96d660"
+    },
+    "src/material_ocr/upstream_legacy/ocr/orientation.py": {
+      "bytes": 1299,
+      "sha256": "fb0fcc752739c653389a03917ac28bfdb5d21ef8b7a606efa48f8648d31c2554"
+    },
+    "src/material_ocr/upstream_legacy/paths.py": {
+      "bytes": 365,
+      "sha256": "e2c04776b4266215a6ac888aae29ad8160cd1b59f830521cbe9a0c8c1296d67c"
+    },
+    "src/material_ocr/upstream_legacy/processes.py": {
+      "bytes": 830,
+      "sha256": "671fa9181426f8557fb826b330b02a3e381f3a43bfda79bb39fe7155b7a9fbd7"
+    },
+    "src/material_ocr/web/__init__.py": {
+      "bytes": 38,
+      "sha256": "c01e45917e0db24b91bb8fc436d79d710a319ac7e86b17a321e7df5462963b70"
+    },
+    "src/material_ocr/web/app.py": {
+      "bytes": 17809,
+      "sha256": "1a5ae6a83c4de82c244906f90f8cb2e7d80da8d135c95634d4edb09fac5e9789"
+    },
+    "src/material_ocr/web/hybrid.py": {
+      "bytes": 3481,
+      "sha256": "11b4269ad076b86348058b7f079861f201bd16543fe65d5fad5916b1d2aa586c"
+    },
+    "src/material_ocr/web/library.py": {
+      "bytes": 22960,
+      "sha256": "9d65e6f61278e85e883954d11c59f8fa48d0e91ea489dcf772dca4f760559a34"
+    },
+    "src/material_ocr/web/paddle_anchors.py": {
+      "bytes": 5713,
+      "sha256": "e07dbbe76ea9253e7af3641661ecebdfef08df7b56df35ac2db54827b318f2ef"
+    },
+    "src/material_ocr/web/recognition.py": {
+      "bytes": 5290,
+      "sha256": "b738758aad3c7ae239696c7bbe0f31532dae1619fea442be0e943a42a9c2c42c"
+    },
+    "src/material_ocr/web/static/app.js": {
+      "bytes": 8817,
+      "sha256": "5ef34e25649ed3e5a5cdf60f28800ffe55cadaf2fe9b5d2ae290ef915c93bd82"
+    },
+    "src/material_ocr/web/static/index.html": {
+      "bytes": 5258,
+      "sha256": "87c3ac0d70717f9bf6e643a0bd600bf3d66b2985195399525052a216d4f5ba81"
+    },
+    "src/material_ocr/web/static/style.css": {
+      "bytes": 8997,
+      "sha256": "4d8e5ca327ce49727bdc7989ecea315bd70717b8b0a44ce7b8ef8f4edf9a8240"
+    },
+    "src/material_ocr/web/tasks.py": {
+      "bytes": 14469,
+      "sha256": "bd56d294934366caf59fd864c3e21047ad4165542ccb2ddf0871568969012383"
+    },
+    "src/material_ocr/worker.py": {
+      "bytes": 2301,
+      "sha256": "b67efd8dc9574fd6e55ea0d290080c7695be8e68855de24ada4a980dfa91944c"
+    },
+    "src/material_ocr/workflow.py": {
+      "bytes": 7472,
+      "sha256": "7cb4e8b7a5e169f48f91ecbd2e72b68d36fa8942996c4d64f509aa257aec469d"
+    },
+    "tools/__init__.py": {
+      "bytes": 84,
+      "sha256": "620572e628de5b712123c5d0518045d1718055c891147c39ae98831961c1e14b"
+    },
+    "tools/compare_ocr_ledgers.py": {
+      "bytes": 141150,
+      "sha256": "f79fba6ebd645c25233c0932c7e0ab66f2f33587042a2c8d4ae8b269b9cda311"
+    },
+    "前端/.gitignore": {
+      "bytes": 593,
+      "sha256": "618c9a4a8d269dc5426355eaf9b86fd4412d41bcbb3c59812b6406c49512a09e"
+    },
+    "前端/README.md": {
+      "bytes": 3172,
+      "sha256": "e11234ebaa7e627eb67e4cada2d5e542fff4cd6e271cbcf7e23cd6eb464b31a2"
+    },
+    "前端/bin/start-local.sh": {
+      "bytes": 1180,
+      "sha256": "ab5edcdafceb3bbea15966ed69489a61a1f49e85e7297bd7c6b22acedf03363c"
+    },
+    "前端/java/business/pom.xml": {
+      "bytes": 3095,
+      "sha256": "3399f932f46e30a8c8fe830cdd642d9b529ab1a6b8360fbc835bca6fed4bb787"
+    },
+    "前端/java/business/src/main/java/com/haitang/pdf2word/PdfToWordApplication.java": {
+      "bytes": 528,
+      "sha256": "aa70e3136d0a8903c9c1d4d9ad5d97d12bf52966e85678fede456f122bf63c3b"
+    },
+    "前端/java/business/src/main/java/com/haitang/pdf2word/client/HttpOcrClient.java": {
+      "bytes": 15710,
+      "sha256": "a0a690e092c94a083c2f68ff3f654a5ce1a104fc0a0b03c29d23c4347034e143"
+    },
+    "前端/java/business/src/main/java/com/haitang/pdf2word/config/CorsConfig.java": {
+      "bytes": 998,
+      "sha256": "1c18cbe4cfef4cee12038916e56f601853751a7c8e62a79f1948619093b75b3c"
+    },
+    "前端/java/business/src/main/java/com/haitang/pdf2word/config/FileProperties.java": {
+      "bytes": 304,
+      "sha256": "86ccd06aa7ae004ee395ba01a664a584fb8471e756c5fcd888f11c55401734cd"
+    },
+    "前端/java/business/src/main/java/com/haitang/pdf2word/config/HttpClientConfig.java": {
+      "bytes": 689,
+      "sha256": "4b3521277cda17636667471626971ac649b4f14932a539fa21b3ad6dbecbd6d6"
+    },
+    "前端/java/business/src/main/java/com/haitang/pdf2word/config/OcrProperties.java": {
+      "bytes": 432,
+      "sha256": "098d83a27b451dcadb0839fee933ef6784e06dd2c631a9cd06f576046de57590"
+    },
+    "前端/java/business/src/main/java/com/haitang/pdf2word/config/WebMvcConfig.java": {
+      "bytes": 2939,
+      "sha256": "b5d1c1961750582476bfb15dd710de3c99f8f06db3d997917471b24e39768638"
+    },
+    "前端/java/business/src/main/java/com/haitang/pdf2word/controller/HealthController.java": {
+      "bytes": 523,
+      "sha256": "8798c6188d187d2bccf767321e9b837c7e8c29b4bf27ff4763111395b86ef718"
+    },
+    "前端/java/business/src/main/java/com/haitang/pdf2word/controller/HistoryController.java": {
+      "bytes": 1660,
+      "sha256": "a3d7ea19f62e916af72a50ce0a56482b148ab05c518344b8730052773cf1116e"
+    },
+    "前端/java/business/src/main/java/com/haitang/pdf2word/controller/LibraryController.java": {
+      "bytes": 14807,
+      "sha256": "9c054de4778cdef79779818c6daabe9619c045c237169e6a8e0e874863bb2ed1"
+    },
+    "前端/java/business/src/main/java/com/haitang/pdf2word/controller/MasterLedgerController.java": {
+      "bytes": 2930,
+      "sha256": "5548ddcdad4202f71b776782a41554d8dae692fe6a255554c760757317326ad1"
+    },
+    "前端/java/business/src/main/java/com/haitang/pdf2word/controller/PresetsController.java": {
+      "bytes": 1467,
+      "sha256": "8b0e34af3e356bfbdd38a3fb4cbbdf1e67c2692c57d84581c3400d28752e7026"
+    },
+    "前端/java/business/src/main/java/com/haitang/pdf2word/db/HistoryEntity.java": {
+      "bytes": 1466,
+      "sha256": "6d26fdbe2951e23b6fbb63215786290995e1e87ae89abcfe3b3e3c1d9138fa48"
+    },
+    "前端/java/business/src/main/java/com/haitang/pdf2word/db/HistoryRepository.java": {
+      "bytes": 678,
+      "sha256": "ec7f5c494fd7c57a53f44efe44eb01097076b8adc60778b08caf2069692db30b"
+    },
+    "前端/java/business/src/main/java/com/haitang/pdf2word/enums/LibraryStatus.java": {
+      "bytes": 124,
+      "sha256": "61a1bfa452b89d60c55b2149d3713eece87c535a79a12e8366f5c17a006f2779"
+    },
+    "前端/java/business/src/main/java/com/haitang/pdf2word/exception/BizException.java": {
+      "bytes": 380,
+      "sha256": "00a7fecb9bf3815d6e765b188cada98e4f8e26a44d585315d096af5ad27bceeb"
+    },
+    "前端/java/business/src/main/java/com/haitang/pdf2word/exception/GlobalExceptionHandler.java": {
+      "bytes": 2544,
+      "sha256": "bc5566a08a8af2cfc797d4eea6d8507730a60b3e3baef614bc92e2156c7d0935"
+    },
+    "前端/java/business/src/main/java/com/haitang/pdf2word/model/HistoryView.java": {
+      "bytes": 696,
+      "sha256": "46e4cec38075f9fc32e1b4412393738aaf3f2433638a3107b2d8d8324083ceec"
+    },
+    "前端/java/business/src/main/java/com/haitang/pdf2word/model/LibraryPage.java": {
+      "bytes": 192,
+      "sha256": "82e9f9929d10eba27aff2de3d42a5b38a987ab8c5ef49f342e8eba32800e875c"
+    },
+    "前端/java/business/src/main/java/com/haitang/pdf2word/model/LibraryPdf.java": {
+      "bytes": 503,
+      "sha256": "54c7590bed920bd8c05436b42b9906a9d5e754c36d1e421a656c6b19a81ae249"
+    },
+    "前端/java/business/src/main/java/com/haitang/pdf2word/model/LibraryResp.java": {
+      "bytes": 184,
+      "sha256": "24d9cd4c66753857430b9a3a634b7f2ed007ed90ffaa4e269811256a38c1b40c"
+    },
+    "前端/java/business/src/main/java/com/haitang/pdf2word/model/MasterLedgerCell.java": {
+      "bytes": 674,
+      "sha256": "7672c9daa872a63a372f9e1554bf882c66c812eab88d67e316d45ee2841a2b63"
+    },
+    "前端/java/business/src/main/java/com/haitang/pdf2word/model/MasterLedgerResponse.java": {
+      "bytes": 474,
+      "sha256": "5c4d198cbc840fe4e90806f2f7431f69ba370fd0b640f78918dd6358858a31ee"
+    },
+    "前端/java/business/src/main/java/com/haitang/pdf2word/model/MasterLedgerRow.java": {
+      "bytes": 1200,
+      "sha256": "63baab78b9fdc0f546bd0be64c028767232c786846713a49078bb4105a143049"
+    },
+    "前端/java/business/src/main/java/com/haitang/pdf2word/model/Preset.java": {
+      "bytes": 3683,
+      "sha256": "a5a78ef5e06e608a4be8a291e1495f6f6420cd0afedca2767d464a149ccc86d1"
+    },
+    "前端/java/business/src/main/java/com/haitang/pdf2word/other/ApiResponse.java": {
+      "bytes": 718,
+      "sha256": "95b9b14e85c0a4357bc54cbc9ff39a849a6e0281ff13fb46779ca039fa325fc8"
+    },
+    "前端/java/business/src/main/java/com/haitang/pdf2word/service/ConcreteLedgerRules.java": {
+      "bytes": 3857,
+      "sha256": "1f60565ec655eee6157cec245ad99e8c2aaec364f22ee901d4026b900ebaa4db"
+    },
+    "前端/java/business/src/main/java/com/haitang/pdf2word/service/LedgerCompareService.java": {
+      "bytes": 18055,
+      "sha256": "6bd7bffbba16fd0f585b60a5b016a95d941b6b2d6215a2bfec025fef86ed67de"
+    },
+    "前端/java/business/src/main/java/com/haitang/pdf2word/service/LibraryService.java": {
+      "bytes": 95018,
+      "sha256": "f0eae7c8b4809237fc8911171edc0614770183b0710e6941b258cbb024c2a5e9"
+    },
+    "前端/java/business/src/main/java/com/haitang/pdf2word/service/PresetService.java": {
+      "bytes": 545,
+      "sha256": "1f641bca4378ac4f0f5188b0651ba50f073b047f889863f65d417665eb4556b7"
+    },
+    "前端/java/business/src/main/java/com/haitang/pdf2word/utils/LightXlsxReader.java": {
+      "bytes": 8638,
+      "sha256": "b4ae5f6f1f64a422d8d1c83fba3aab91011feccac854447dbbf9ec156b2572b4"
+    },
+    "前端/java/business/src/main/java/com/haitang/pdf2word/utils/PathUtils.java": {
+      "bytes": 1807,
+      "sha256": "7a090f01b2485aa5f7f26c238370a4d5f360a12708e4d54b99a13a7e30accc91"
+    },
+    "前端/java/business/src/main/java/com/haitang/pdf2word/utils/PdfNameUtils.java": {
+      "bytes": 1360,
+      "sha256": "2ffce9080d996f2acfe38261593a91982dab7dc8bbd306abcd7d2e78e411934c"
+    },
+    "前端/java/business/src/main/java/com/haitang/pdf2word/utils/StringUtils.java": {
+      "bytes": 688,
+      "sha256": "0c4da7352c39b5e0a50d31d259cd33a9151a42e6d1de18c496a2e2fbdaddd30d"
+    },
+    "前端/java/business/src/main/resources/application-dev.yml": {
+      "bytes": 78,
+      "sha256": "a449cfd49ebc5be33bb79b1f7832adacea8f0148c3bbe14cac0d22a30b6cba05"
+    },
+    "前端/java/business/src/main/resources/application-local.yml": {
+      "bytes": 826,
+      "sha256": "061346060f7d65a72c9a2a2d1e052fc5b252a4ac3c11c8119c24ee2e0fb0b7f1"
+    },
+    "前端/java/business/src/main/resources/application-prod.yml": {
+      "bytes": 77,
+      "sha256": "18a8d8a0b198ccc67649d838defe725fc48f30b6505e3d3f189c205e2bf36204"
+    },
+    "前端/java/business/src/main/resources/application.yml": {
+      "bytes": 1113,
+      "sha256": "3f1db5bda76405e77f34639c3c3ff1a0cc12945dfc91747f0eea56aeb7373579"
+    },
+    "前端/java/business/src/main/resources/logback-spring.xml": {
+      "bytes": 1128,
+      "sha256": "17dde67e8aedfa13a5e8a1c835c887b1c3387d218e89df0646d8ae5f23b6dfb4"
+    },
+    "前端/sql/init.sql": {
+      "bytes": 970,
+      "sha256": "0aa350d54a23cb05bbc244e0e046b00216018215edb4e27be2c3f04736b66022"
+    },
+    "前端/vue/.nvmrc": {
+      "bytes": 4,
+      "sha256": "f6bca0e7f46a94bd3349fdb86511cbec4a9091e409b62dd2d6b8c1fdb9a3ce00"
+    },
+    "前端/vue/index.html": {
+      "bytes": 310,
+      "sha256": "5ad800446e2c3a2dff1daf62d933738bb96f067077994fb8b0cd8981704d3100"
+    },
+    "前端/vue/package-lock.json": {
+      "bytes": 76309,
+      "sha256": "114e2d838e7209a16bb50259769a48fc68eba3b7df70a47575f6052c2e9f3703"
+    },
+    "前端/vue/package.json": {
+      "bytes": 687,
+      "sha256": "6db39548693ef5c2626e33fb187c88378516cf78ae0f9de6f0e4be0c116a87ad"
+    },
+    "前端/vue/src/App.vue": {
+      "bytes": 2279,
+      "sha256": "86f91d7e3f7cec19bc27956623320445fe6b733cc0525aa4f911cefd69fe68ba"
+    },
+    "前端/vue/src/api/library.js": {
+      "bytes": 2441,
+      "sha256": "754677308d78384f76377fdd18b2467a5f559e0f3fc9c3aa5f0172d90ee5593b"
+    },
+    "前端/vue/src/api/masterLedger.js": {
+      "bytes": 1568,
+      "sha256": "5a506829930e4a1ee1a56df877db8d1fdc83a8ebcccc2d3571ebfa0dcf603289"
+    },
+    "前端/vue/src/api/presets.js": {
+      "bytes": 401,
+      "sha256": "f31c3afeda1097f2be5e3a40d97bda5d907ce7d65a85e9474c6b8013acdc5b9b"
+    },
+    "前端/vue/src/api/request.js": {
+      "bytes": 1451,
+      "sha256": "36ce7b0b9ae61fb4b08b6ad83e41392e22a595a449ece390f434238da6c70425"
+    },
+    "前端/vue/src/main.js": {
+      "bytes": 366,
+      "sha256": "8885f4faa2cf835b2b610acab742297255a96094725fa5ffbb84896ebda5ae58"
+    },
+    "前端/vue/src/router/index.js": {
+      "bytes": 642,
+      "sha256": "f9f551467e97cfe71556d879fae95cde525ab9357c67259e84ef8cc160f718df"
+    },
+    "前端/vue/src/stores/recognition.js": {
+      "bytes": 4946,
+      "sha256": "758b2b3e58530d71af67a4d1b7ede45c74146c917cba3c4cf1607ccf18e8f189"
+    },
+    "前端/vue/src/styles/fonts.css": {
+      "bytes": 430,
+      "sha256": "7ad2aeb50c03f92d6510b481cee9b98ac3b55afd486f1963a5e11a2cd2868c83"
+    },
+    "前端/vue/src/styles/tokens.css": {
+      "bytes": 1175,
+      "sha256": "c31cfdc5cf39f0ab7a0dfbdb5592a8773c0414f0d0aadbd527d1cf8cd0e90b33"
+    },
+    "前端/vue/src/utils/apiResponse.js": {
+      "bytes": 771,
+      "sha256": "f048fefee1a0b4587a54579e7e3952dc08c43a18420b0e3802d26ba7cff5ec87"
+    },
+    "前端/vue/src/utils/format.js": {
+      "bytes": 682,
+      "sha256": "64c31a30f8d2123df71665755548629121697aa24d5f68a3a5dc0aeb4661953b"
+    },
+    "前端/vue/src/utils/reviewDiagnostics.js": {
+      "bytes": 6078,
+      "sha256": "2d4f20908a8f14c811f57ce0c453ec35c8dad8b906b1ed520de194df1b30524e"
+    },
+    "前端/vue/src/views/HistoryView.vue": {
+      "bytes": 3234,
+      "sha256": "37df11c7032d2e35c4e363be6c8c85190a5d834e40fe35ded6e5e6fc4ab0782a"
+    },
+    "前端/vue/src/views/MasterLedgerView.vue": {
+      "bytes": 15150,
+      "sha256": "de1417f1a6eb5a61397a34b9563272ca42e1feef2f755e700eb9a2a3cdead346"
+    },
+    "前端/vue/src/views/ResultView.vue": {
+      "bytes": 88634,
+      "sha256": "3d44ddbd18d64c55221f8a8c9e5c174afba53492b0ba52206ccdcc0e6a812621"
+    },
+    "前端/vue/src/views/UploadView.vue": {
+      "bytes": 5104,
+      "sha256": "0dcf358343a38a7b40612e4721e8d0621eeb576ece339bffaf7f139a839479ff"
+    },
+    "前端/vue/vite.config.js": {
+      "bytes": 914,
+      "sha256": "b718b348bb8d8971b92181987fa8e3111597a0623a0ca7a14e87bb1f3cbbfa00"
+    }
+  }
+}

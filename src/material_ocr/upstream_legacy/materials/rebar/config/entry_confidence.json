@@ -1,0 +1,10 @@
+{
+  "policy_id": "quantity_list_structured_fields_v1",
+  "general_min_score": 0.95,
+  "profiles": ["entry_quantity_list"],
+  "quantity_header_min_score": 0.90,
+  "specification_min_score": 0.90,
+  "min_text_coverage": 0.98,
+  "min_assignment_margin": 0.50,
+  "note": "Acceptance thresholds, not calibrated probabilities. Only single-token, uniquely assigned, strictly parsed quantity headers with units and grade-plus-diameter specifications qualify. Raw OCR text/scores are never changed."
+}

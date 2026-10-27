@@ -1,0 +1,73 @@
+# OCR/model outputs and local regression artifacts
+runs/
+__pycache__/
+data/
+*.egg-info/
+build/
+dist/
+.venv/
+/.venv-glm/
+*.py[cod]
+.paddlex/
+/.storage-maintenance.lock
+
+# Business scans are local inputs, never repository fixtures
+*.pdf
+/钢筋报审文件/
+# Development records, tools and historical handoffs stay local
+/experiments/
+/tools/*
+!/tools/__init__.py
+!/tools/compare_ocr_ledgers.py
+/tests/
+/docs/history/
+/docs/MIGRATION.md
+
+# Local model manifests and weights; the app creates its cache when needed
+/models/
+
+# Local ledger-format reference
+/报审表字文字内容提取项目说明.docx
+
+# Frontend runtime data and generated dependency caches
+/前端/image/
+/前端/logs/
+/前端/runtime/
+/前端/vue/.vite/
+
+# Private local data, generated reports and model downloads
+/reports/
+/2混凝土/
+/混凝土报审文件/
+/.aws/
+/.codex/
+/.agents/
+/.autodl-runtime.json
+.venv*/
+/venv*/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+.env
+.env.*
+!.env.example
+*.log
+*.sqlite
+*.sqlite3
+*.db
+*.mv.db
+*.trace.db
+*.safetensors
+*.pdparams
+*.pdiparams
+*.pdmodel
+*.onnx
+*.pt
+*.pth
+
+# Real OCR regression fixtures stay local; test source is distributable
+/tests_anchors/fixtures/
+/tests_anchors/v3/data/
+/tests_anchors/v3/test_fixtures/
+/tests_upstream/fixtures/

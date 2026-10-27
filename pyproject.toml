@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "material-form-ocr"
+version = "0.1.0"
+description = "Local material-document OCR, configurable matching and human review"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "paddleocr==3.3.2", "paddlex[ocr]==3.3.13", "pypdfium2==4.30.0", "opencv-contrib-python==4.10.0.84",
+  "numpy>=1.26,<3", "Pillow>=10", "fastapi>=0.115,<1", "uvicorn>=0.30,<1",
+  "python-multipart>=0.0.18,<1", "XlsxWriter>=3.2,<4"
+]
+
+[project.scripts]
+material-ocr = "material_ocr.cli:main"
+
+[project.optional-dependencies]
+test = ["httpx>=0.27,<1"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+material_ocr = ["web/static/*", "review/templates/*", "review/*.js", "materials/rebar/config/*.json", "materials/examples/*.json", "anchor_v3/*.json", "attachment_legacy/*.json", "upstream_legacy/materials/rebar/config/*.json"]

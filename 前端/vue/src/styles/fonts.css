@@ -1,0 +1,15 @@
+/* local fonts via @fontsource — wired offline */
+@import "@fontsource-variable/inter";
+@import "@fontsource-variable/noto-sans-sc";
+@import "@fontsource/jetbrains-mono";
+
+/* 默认 UI 字体下沉到 root，覆盖 element-plus 默认 */
+:root {
+  --el-font-family: var(--sans);
+  --el-font-family-monospace: var(--mono);
+}
+
+html, body {
+  font-family: var(--sans);
+  font-feature-settings: "tnum" 1, "cv11" 1;
+}

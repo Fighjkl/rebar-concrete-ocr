@@ -1,0 +1,37 @@
+/* design tokens — 浅色数据表盘（白 + 微暖灰 + 深松柏绿） */
+/* 禁用 AI 默认三套：奶油陶土 / 近黑酸绿 / 报纸细线 */
+:root {
+  --bg:        #FFFFFF;
+  --bg-soft:   #FAF9F6;
+  --bg-tint:   #F4F2EC;
+  --surface:   #FFFFFF;
+  --border:    #E8E5DD;
+  --border-mid: #D6D2C5;
+  --ink:       #1A1A1A;
+  --ink-mid:   #5C5C5C;
+  --ink-mute:  #8C8C8C;
+  --accent:    #0B6E4F;
+  --accent-mid: #0F8A66;
+  --accent-soft: #E5EFEB;
+  --warn:      #C2410C;
+  --warn-soft: #FBEFE6;
+  --ok:        #2F855A;
+  --serif:     "Source Han Serif SC", "Noto Serif SC", "Songti SC", serif;
+  --sans:      "Inter Variable", Inter, "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  --mono:      "JetBrains Mono", "SF Mono", Consolas, monospace;
+  --radius:    4px;
+  --radius-sm: 2px;
+  --divider:   0 1px 0 rgba(26,26,26,0.06);
+  --shadow:    0 1px 2px rgba(0,0,0,0.04);
+  --type-h1:   28px;
+  --type-h1-lh: 36px;
+  --type-h2:   20px;
+  --type-h2-lh: 28px;
+  --type-label: 11px;
+  --type-label-ls: 0.06em;
+  --type-body: 14px;
+  --type-body-lh: 22px;
+  --type-data: 13px;
+  --type-data-lh: 20px;
+  --type-micro: 11px;
+}

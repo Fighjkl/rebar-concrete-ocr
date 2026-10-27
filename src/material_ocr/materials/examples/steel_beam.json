@@ -1,0 +1,6 @@
+{
+  "id": "steel_beam", "name": "钢梁", "enabled": false,
+  "fields": ["section", "length_m", "quantity_t", "heat_lot_no", "certificate_no"],
+  "relations": [{"from": "inspection_record", "to": "delivery_note", "keys": ["section", "length_m", "quantity_t"]}],
+  "note": "接口设计示例，不是已验证识别规则。实现MaterialAdapter并验证样例后启用。"
+}

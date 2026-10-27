@@ -1,0 +1,7 @@
+# Install a hardware-compatible torch/torchvision pair separately first.
+# GLM workers also detect page regions with OpenCV after transcription.
+transformers==5.16.1
+Pillow>=10
+pypdfium2>=4.30
+numpy>=1.26,<3
+opencv-contrib-python==4.10.0.84

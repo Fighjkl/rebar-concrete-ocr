@@ -1,0 +1,40 @@
+target/
+**/target/
+**/node_modules/
+**/dist/
+image/documents/
+logs/*
+!logs/.gitkeep
+jar/*.jar
+*.log
+*.iml
+.idea/
+.vscode/
+
+# Test/debug artifacts
+image/jar_inspect/
+image/xlsx_inspect/
+image/test_master.xlsx
+*.class
+image/documents.bak.*/
+jar/inspect/
+jar/probe*.txt
+AGENTS.md.bak.*
+ocr-ui.html
+ocr_p33.txt
+ocr_test*.txt
+openapi.json
+page_0034_*.jpg
+test_upload.pdf
+curl_out.txt
+curl_out.log
+
+*.bak
+
+.npm-cache/
+
+# File-backed local development database
+/runtime/
+
+# OCR library cache (PDFs + OCR + ledger pulled from remote OCR service)
+image/library/

@@ -1,0 +1,6 @@
+{
+  "id": "concrete", "name": "混凝土", "enabled": false,
+  "fields": ["strength_class", "volume_m3", "production_batch", "supplier"],
+  "relations": [{"from": "inspection_record", "to": "delivery_note", "keys": ["strength_class", "volume_m3", "production_batch"]}],
+  "note": "方量与强度独立于钢筋吨数/直径；需实现MaterialAdapter，禁止套用钢筋规则。"
+}

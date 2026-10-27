@@ -1,0 +1,8 @@
+{
+  "max_vertical_h": 6.0,
+  "max_horizontal_h": 5.0,
+  "max_angle_deg": 18.0,
+  "max_cost": 6.0,
+  "ambiguity_margin": 0.8,
+  "min_ocr_score": 0.8
+}

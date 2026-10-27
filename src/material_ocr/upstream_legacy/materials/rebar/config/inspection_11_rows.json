@@ -1,0 +1,15 @@
+{
+  "template_id": "rebar_entry_full_grid_v4",
+  "auto_align": true,
+  "description": "同版式11行明细自动定位：外框透视校正、连续行与列结构校验。失败停止，不回退固定坐标。空白行仍保留。不是任意版式通用模板。",
+  "quad_normalized": [[0.1084, 0.2161], [0.9693, 0.2200], [0.9639, 0.6450], [0.1053, 0.6400]],
+  "target_size": [2200, 1540],
+  "column_boundaries": [0.0, 0.079, 0.231, 0.353, 0.448, 0.607, 0.748, 0.852, 1.0],
+  "adaptive_columns": {"max_boundary_drift": 0.03, "max_column_width_relative_drift": 0.20},
+  "column_names": ["row_no", "material_name", "specification", "weight", "manufacturer_certificate", "inspection_item", "inspection_result", "remarks"],
+  "expected_rows": 11,
+  "first_row_no": null,
+  "line_coverage": 0.55,
+  "min_ocr_score": 0.95,
+  "crop_inset_px": 4
+}

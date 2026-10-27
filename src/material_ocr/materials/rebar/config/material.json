@@ -1,0 +1,10 @@
+{
+  "id": "rebar",
+  "name": "钢筋",
+  "enabled": true,
+  "description": "进场检验表、质量证明书、送货单和同页铭牌的关联与人工审核",
+  "inspection_templates": ["inspection_6_rows.json", "inspection_11_rows.json"],
+  "attachment_rules": "attachment_rules.json",
+  "matching": {"low_confidence_threshold": 0.90},
+  "statistics": {"quantity_field": "weight_t", "unit": "t", "deduplicate_by_content": false}
+}

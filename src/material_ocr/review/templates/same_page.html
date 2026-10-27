@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>__PDF_STEM_HTML__ · 四表匹配与捆绑</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f2f5f8;color:#203249;font:14px system-ui,"Microsoft YaHei",sans-serif}header{background:#17324d;color:white;padding:20px 28px}h1{margin:0 0 8px;font-size:23px}header p{margin:0;color:#ccdae6}.stats,.toolbar,.links{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.stats{padding:14px 24px;background:white}.chip{padding:8px 12px;background:#eaf1f8;border-radius:7px}.layout{display:grid;grid-template-columns:340px 1fr;gap:16px;padding:16px}.left,.right{background:white;border:1px solid #dce4ed;border-radius:9px;padding:14px;min-width:0}.left{position:sticky;top:10px;height:calc(100vh - 32px);display:flex;flex-direction:column}.filters{display:flex;gap:7px;margin-bottom:10px}.list{overflow:auto}select,input{padding:8px;border:1px solid #cad5e0;border-radius:5px;min-width:0}input{flex:1}.entry{width:100%;border:1px solid #e1e7ed;background:#fafbfd;color:inherit;border-radius:6px;padding:10px;text-align:left;margin-bottom:7px;cursor:pointer}.entry.active{border-color:#1684b9;background:#edf7fc}.entry b{display:block;margin-bottom:5px}.entry small,.sub{color:#65788c;line-height:1.6}.warn{color:#ad5a13}.good{color:#177756}h2{margin:0 auto 0 0;font-size:20px}button,.button{cursor:pointer;border:1px solid #bfd0df;background:white;color:#244562;border-radius:5px;padding:8px 11px;text-decoration:none}.primary{background:#1677a5;color:white;border-color:#1677a5}button:disabled{opacity:.5;cursor:default}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;margin-top:13px}.card{border:1px solid #dce5ed;border-radius:7px;padding:11px;min-width:0}.card.selected{border:2px solid #1677a5;background:#f1faff}.card.occupied{background:#f3f3f3}.card h3{font-size:15px;margin:0 0 7px}.key{font-family:ui-monospace,monospace;color:#155c84;overflow-wrap:anywhere}.thumb{display:block;width:100%;max-height:210px;object-fit:contain;background:#edf0f3;margin-top:7px}.notice,.path,.review{padding:12px;border-radius:6px;margin-top:12px;line-height:1.7}.notice{background:#fff6e4}.path{background:#edf7fc}.review{border:1px solid #dce5ed}.review textarea{width:100%;height:75px;margin-top:8px}.conflict{background:#fff0eb;padding:12px;border-radius:6px}.candidate-list{border:1px solid #bcd4e4;border-radius:6px;margin-top:16px;padding:12px}.candidate-list summary{font-size:16px;font-weight:600;cursor:pointer}.candidate-list .grid{max-height:650px;overflow:auto;padding:3px}.bundle-row{padding:10px;border-top:1px solid #e0e6ec}.links{margin-top:14px}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f6f8fa;padding:7px;font:12px ui-monospace,monospace;max-height:280px;overflow:auto}@media(max-width:950px){.layout{grid-template-columns:1fr}.left{position:static;height:400px}.grid{grid-template-columns:1fr}}
+</style>
+<style>
+.ledger{margin:16px;padding:18px;background:white;border:1px solid #dce4ed;border-radius:9px}.ledger h2{margin-bottom:8px}.ledger-layout{display:grid;grid-template-columns:minmax(260px,1fr) minmax(0,2fr);gap:16px;margin-top:16px}.ledger-table-wrap{overflow:auto;max-height:480px}.ledger table{border-collapse:collapse;width:100%;font-size:13px}.ledger th,.ledger td{border:1px solid #dce4ed;padding:8px;text-align:left;white-space:nowrap}.ledger th{background:#edf7fc;position:sticky;top:0}.ledger tr.active{background:#eef8fc}.ledger-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.ledger-field input{width:100%;margin:5px 0}.ledger-field label{display:block;font-weight:600}.ledger-field small{display:block;color:#65788c;overflow-wrap:anywhere}.ledger-field details{font-size:12px}.ledger-source-links{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}.ledger-message{margin:8px 0;white-space:pre-wrap}.ledger button{white-space:nowrap}.ledger-context{width:100%;margin:8px 0}@media(max-width:950px){.ledger-layout{grid-template-columns:1fr}.ledger-fields{grid-template-columns:1fr}.ledger{margin:16px}}
+</style>
+</head>
+<body>
+<header><h1>__PDF_NAME_HTML__ · 四表匹配与捆绑</h1><p>质量证明书 → 铭牌 → 送货单 · 唯一且无冲突时自动捆绑 · 缺失与冲突逐组复核</p></header>
+<div id="stats" class="stats"></div>
+<div class="layout">
+<aside class="left"><div class="filters"><select id="filter"><option value="issue">待补全 / 待复核</option><option value="all">全部记录</option><option value="complete">已捆绑记录</option></select><input id="search" placeholder="记录、证书号或炉批号"></div><div class="list" id="list"></div></aside>
+<main class="right">
+<div class="toolbar"><h2 id="title"></h2><button id="prev">上一条</button><button id="next">下一条</button><button id="download" class="primary">下载捆绑与审核结果</button><button id="download-csv">下载捆绑清单 CSV</button></div>
+<p class="notice">四表唯一关联且无待核验项时自动完成，不再进入人工队列。缺失记录从剩余表单中选择；确认捆绑后同步缩小后续候选。重复检验内容共用一组捆绑。编号近似仅作提示，原字段保留。</p>
+<div id="constraint"></div><div id="conflicts"></div><div class="grid" id="cards"></div>
+<section id="manual-options"></section>
+<section class="review" id="review-panel"><b id="status"></b><div id="selection-summary"></div><textarea id="comment" placeholder="填写原图核验结论；编号或规格差异的说明"></textarea><label><input type="checkbox" id="share-certificate">已核验该证书覆盖多个物料，允许共用已捆绑证书</label><div class="toolbar"><button id="confirm-bundle" class="primary">人工确认并捆绑四表</button><button id="release-bundle">解除本组捆绑</button><span id="action-message" role="status"></span></div><div class="sub">审核状态保存在当前浏览器，可下载 JSON 备份并通过导入恢复。捆绑清单可供后续填表使用。</div><label class="button">导入审核 JSON <input id="import-review" type="file" accept="application/json,.json"></label></section>
+<details id="bundle-panel"><summary>已完成的四表捆绑清单</summary><div id="bundles"></div></details>
+<details><summary>原候选、冲突与OCR证据</summary><pre id="evidence"></pre></details>
+<div class="links"><a class="button" href="match_results.json">原始匹配 JSON</a><a class="button" href="four_form_bundles.json">初始自动捆绑</a><a class="button" href="review_queue.json">初始复核队列</a><a class="button" href="MATCH_RESULTS.md">结果说明</a></div>
+</main></div>
+<section id="filling-panel" class="ledger" aria-labelledby="filling-title">
+<div class="toolbar"><h2 id="filling-title">自动填表 · 材料报审台账</h2><button id="fill-refresh">更新台账预览</button><button id="fill-export" class="primary" disabled>导出已确认行 Excel</button></div>
+<p class="sub">每个独立铭牌生成一行，重复检验记录合并引用。核对报审信息与关联附件字段，补正后确认；文件编号可留空。验收数量单位为吨。</p>
+<div id="fill-counts" class="stats"></div><div id="fill-message" class="ledger-message" role="status"></div>
+<div class="ledger-layout"><div class="ledger-table-wrap" id="fill-rows"></div><div id="fill-editor"></div></div>
+</section>
+<script type="application/json" id="data">__DATA__</script>
+<script src="review_state.js"></script>
+<script src="review_ui.js"></script>
+<script src="filling_ui.js"></script>
+</body></html>

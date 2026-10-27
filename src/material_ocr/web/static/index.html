@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>材料表单工作台</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="/" aria-label="材料表单工作台首页"><span class="brand-icon">材</span><span>材料表单<span class="brand-sub">识别 · 匹配 · 审核</span></span></a><span class="local-badge"><i></i> 本地工作台</span></header>
+  <main>
+    <div class="intro"><div><p class="eyebrow">DOCUMENT WORKSPACE</p><h1>从材料文件，到可核验的结果。</h1><p class="subtitle">上传检验记录与附件所在的 PDF，识别字段、关联表单，逐条核对原图。</p></div><div class="steps" aria-label="处理流程"><span><b>01</b> 上传文件</span><em>→</em><span><b>02</b> 识别与匹配</span><em>→</em><span><b>03</b> 人工审核</span></div></div>
+    <div class="workspace">
+      <section class="panel upload-panel" aria-labelledby="upload-title">
+        <div class="section-head"><h2 id="upload-title">新建分析</h2><span class="small-tag">PDF</span></div>
+        <form id="upload-form">
+          <label class="field-label" for="material">材料类型</label><select id="material" name="material" required></select>
+          <p id="material-note" class="field-note"></p>
+          <label class="field-label" for="layout">检验记录版式</label><select id="layout"><option value="auto">自动选择支持的版式</option><option value="6_rows">六行检验表</option><option value="11_rows">十一行检验表</option></select>
+          <div id="drop-zone" class="drop-zone" tabindex="0" role="button" aria-label="选择PDF文件，或拖放到此处">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true"><path d="M9 4h12l7 7v21H9V4Z" stroke="currentColor" stroke-width="1.5"/><path d="M21 4v8h7M18 25V15m-4 4 4-4 4 4" stroke="currentColor" stroke-width="1.5"/></svg>
+            <strong>拖入 PDF 文件</strong><span>或选择文件、文件夹</span>
+            <div class="choose-buttons"><button type="button" id="choose-files">选择文件</button><button type="button" id="choose-folder">选择文件夹</button></div>
+          </div>
+          <input id="file-input" type="file" accept=".pdf,application/pdf" multiple hidden>
+          <input id="folder-input" type="file" webkitdirectory multiple hidden>
+          <div id="selected" class="selected" aria-live="polite"></div>
+          <div class="selection-tools" id="selection-tools" hidden><span id="file-count"></span><button type="button" id="clear-files" class="text-button">清空</button></div>
+          <p class="field-note">文件夹会读取其中的 PDF。每份文件独立匹配，避免混用不同批次的附件。</p>
+          <button id="submit" class="primary wide" type="submit" disabled>开始识别与匹配 <span>→</span></button>
+          <p id="upload-status" role="status" class="status-message"></p>
+        </form>
+        <div class="runtime"><span class="runtime-dot"></span><div><strong id="runtime-title">正在连接服务</strong><span id="runtime-description">识别任务将在后台执行</span></div></div>
+        <div class="future"><div><strong>自动填表</strong><span class="small-tag">钢筋台账</span></div><p>打开匹配审核页，下方可预览材料报审台账。补正并确认字段后，下载 Excel；每个独立铭牌一行，附字段来源。</p><a class="outline" href="#library-panel">查看结果并生成台账</a></div>
+      </section>
+      <div class="results-column">
+        <section class="panel task-panel" aria-labelledby="tasks-title"><div class="section-head"><div><h2 id="tasks-title">分析任务</h2><p class="muted">任务和结果保存在本机，刷新页面可继续查看。</p></div><button id="refresh" type="button" class="outline">刷新</button></div><div id="jobs" aria-live="polite"><div class="empty"><div class="empty-icon">↗</div><h3>开始第一份材料分析</h3><p>选择文件后，识别进度与匹配结果会显示在这里。</p></div></div></section>
+        <section class="panel library-panel" id="library-panel" hidden><div class="section-head"><div><h2>已有审核结果</h2><p class="muted">使用已生成的匹配页面，继续核对原图与字段。</p></div></div><div id="library"></div></section>
+        <section class="panel review-panel" id="review-panel" hidden><div class="section-head"><div><h2 id="review-title">匹配审核</h2><p class="muted">候选关联与未核验字段均保留在审核页中。</p></div><div class="review-actions"><a id="review-open" class="outline" target="_blank" rel="noopener">单独打开 ↗</a><button id="close-review" class="text-button" type="button">收起</button></div></div><iframe id="review-frame" title="匹配结果与人工审核" src="about:blank"></iframe></section>
+      </div>
+    </div>
+    <footer>支持的版式与材料规则逐步扩展。OCR 与候选匹配完成后，仍需人工核验关键字段。</footer>
+  </main>
+</body>
+</html>

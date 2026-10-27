@@ -1,0 +1,10 @@
+paddleocr==3.3.2
+paddlex[ocr]==3.3.13
+pypdfium2==4.30.0
+opencv-contrib-python==4.10.0.84
+numpy>=1.26,<3
+Pillow>=10
+fastapi>=0.115,<1
+uvicorn>=0.30,<1
+python-multipart>=0.0.18,<1
+XlsxWriter>=3.2,<4

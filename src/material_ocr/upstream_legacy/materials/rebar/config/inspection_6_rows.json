@@ -1,0 +1,53 @@
+{
+  "template_id": "rebar_entry_six_rows_v1",
+  "auto_align": true,
+  "description": "六行检验表：外框和完整横线自动定位；子行合并到同一材料行，几何失败则停止。",
+  "quad_normalized": [
+    [
+      0.1084,
+      0.2161
+    ],
+    [
+      0.9693,
+      0.22
+    ],
+    [
+      0.9639,
+      0.645
+    ],
+    [
+      0.1053,
+      0.64
+    ]
+  ],
+  "target_size": [
+    2200,
+    1400
+  ],
+  "column_boundaries": [
+    0,
+    0.039,
+    0.152,
+    0.265,
+    0.34,
+    0.53,
+    0.718,
+    0.903,
+    1
+  ],
+  "column_names": [
+    "row_no",
+    "material_name",
+    "specification",
+    "weight",
+    "manufacturer_certificate",
+    "inspection_item",
+    "inspection_result",
+    "remarks"
+  ],
+  "expected_rows": 6,
+  "first_row_no": null,
+  "line_coverage": 0.75,
+  "min_ocr_score": 0.95,
+  "crop_inset_px": 4
+}

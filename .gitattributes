@@ -1,0 +1,2 @@
+# Shell entry points run under Linux/WSL and must use Unix line endings.
+*.sh text eol=lf
