@@ -6,7 +6,7 @@ import re
 from decimal import Decimal, InvalidOperation
 
 from .entry_duplicates import deduplicate_certificate_records
-from .extraction import ALIASES, entry_date, inspection_location_from_remarks, inspection_manufacturer_alias, issue_text, normalized, parse_inspection_html, specification, submission_date, validate_fields, value_text, volume
+from .extraction import ALIASES, entry_date, inspection_location_from_remarks, inspection_manufacturer_alias, issue_text, normalized, parse_inspection_html, specification, submission_date, use_location_text, validate_fields, value_text, volume
 from .submission_number import is_complete_document_no
 
 FORM_LABELS = {
@@ -417,14 +417,9 @@ def _mix_design_specification(page, text, fallback=''):
     return specification(parsed) or fallback
 
 
-def _same_spec_ignoring_self_compacting(left, right):
-    """True only when strength/impermeability agree and self-compacting differs."""
-    left, right = specification(left), specification(right)
-    left_self = left.endswith('自密实')
-    right_self = right.endswith('自密实')
-    left_base = left[:-3] if left_self else left
-    right_base = right[:-3] if right_self else right
-    return bool(left_base and left_base == right_base and left_self != right_self)
+def _specification_key(value):
+    """Match strength/impermeability exactly; self-compacting is optional."""
+    return specification(value).removesuffix('自密实')
 
 
 def _mix_design_location(page, fallback=''):
@@ -494,7 +489,7 @@ def _mix_design_location(page, fallback=''):
 
 
 def _location_key(text):
-    value = normalized(text).upper()
+    value = normalized(use_location_text(text)).upper()
     return value.translate(str.maketrans({'－': '-', '—': '-', '–': '-', '‐': '-', '‑': '-'}))
 
 
@@ -808,8 +803,8 @@ def classify_pages(pages: list[dict]) -> list[dict]:
             blocks = page.get('blocks') or (passes[0].get('blocks', []) if passes else [])
             location_key = _location_key(form['use_location'])
             location_blocks = [block for block in blocks if block.get('polygon')
-                               and normalized(block.get('text', ''))
-                               and normalized(block.get('text', '')) in location_key]
+                               and _location_key(block.get('text', ''))
+                               and _location_key(block.get('text', '')) in location_key]
             form['field_evidence']['use_location'] = {
                 'page_no': pno, 'raw_text': form['use_location'], 'source_role': kind,
                 'precision': 'ocr_blocks' if location_blocks else 'page',
@@ -964,10 +959,12 @@ def _inherit_submission_use_location(row, submission):
     inspection_source = dict(evidence.get('use_location', {}),
                              page_no=row.get('page_no'), source_role='inspection')
     inspection_source.setdefault('raw_text', inspection_value)
+    inspection_value = use_location_text(inspection_value)
     submission_value = value_text((submission or {}).get('use_location'))
     submission_source = dict((submission or {}).get('field_evidence', {}).get('use_location', {}),
                              page_no=(submission or {}).get('page_no'), source_role='submission')
     submission_source.setdefault('raw_text', submission_value)
+    submission_value = use_location_text(submission_value)
     row['field_conflicts'] = list(row.get('field_conflicts', []))
     if inspection_value and submission_value and not _same_location(inspection_value, submission_value):
         source_label = '进场表备注' if inspection_source.get('source_field') == 'remarks' else '进场表部位'
@@ -1031,7 +1028,6 @@ def match_forms(forms: list[dict]) -> dict:
     for inspection in inspections:
         warranty = inspection.get('warranty_no', '')
         location_match_reason = ''
-        candidate_spec_mismatch = False
         if warranty:
             candidates = [f for f in mixes if warranty in _identifiers(f)]
             specification_candidates = list(candidates)
@@ -1039,45 +1035,18 @@ def match_forms(forms: list[dict]) -> dict:
             reason = (f'进场检验记录质保书编号“{warranty}”未找到对应配比报告' if not candidates else
                       f'质保书编号“{warranty}”匹配到 {len(candidates)} 份配比报告，需人工选择' if len(candidates) > 1 else '')
         else:
-            spec = specification(inspection.get('specification', ''))
-            candidates = [f for f in mixes if spec and specification(f.get('specification', '')) == spec]
+            spec = _specification_key(inspection.get('specification', ''))
+            candidates = [f for f in mixes if spec and _specification_key(f.get('specification', '')) == spec]
             specification_candidates = list(candidates)
-            if not candidates and spec:
-                # A report marked C60 is a useful review candidate for an
-                # inspection marked C60自密实 (and vice versa), but the marker
-                # affects the concrete mixture, so never silently treat it as
-                # an exact match or use it to auto-fill linked identifiers.
-                candidates = [f for f in mixes
-                              if _same_spec_ignoring_self_compacting(spec, f.get('specification', ''))]
-                candidate_spec_mismatch = bool(candidates)
             strategy = 'specification'
             reason = ('进场检验记录缺少质保书编号和规格，无法检索配比报告' if not spec else
                       f'进场检验记录无质保书编号，规格“{spec}”未找到配比报告' if not candidates else
                       f'规格“{spec}”匹配到 {len(candidates)} 份配比报告，需人工选择' if len(candidates) > 1 else '')
-            if candidate_spec_mismatch or len(candidates) > 1:
+            if len(candidates) > 1:
                 entry_location = inspection.get('use_location') or inspection.get('remarks', '')
                 location_matches = [candidate for candidate in candidates
                                     if _same_location(entry_location, candidate.get('use_location', ''))]
-                if candidate_spec_mismatch:
-                    variant_description = (f'进场规格“{spec}”与报告规格“{candidates[0].get("specification", "")}”'
-                                           '仅自密实标记不同')
-                    if len(location_matches) == 1:
-                        candidates = location_matches
-                        strategy = 'specification_variant_and_use_location_review'
-                        reason = (f'{variant_description}，工程部位与进场备注一致（第 '
-                                  f'{candidates[0].get("page_no")} 页）；规格差异需人工核验')
-                        location_match_reason = reason
-                    elif location_matches:
-                        candidates = location_matches
-                        reason = (f'{variant_description}；工程部位匹配到 {len(location_matches)} 份报告，'
-                                  '保留候选供人工核验')
-                    elif not entry_location:
-                        reason = (f'{variant_description}；进场记录未提取到备注/工程部位，'
-                                  '保留候选供人工核验')
-                    else:
-                        reason = (f'{variant_description}；进场工程部位“{entry_location}”未与候选报告部位一致，'
-                                  '保留候选供人工核验')
-                elif len(location_matches) == 1:
+                if len(location_matches) == 1:
                     candidates = location_matches
                     strategy = 'specification_and_use_location'
                     location_match_reason = (f'规格“{spec}”有 {len(specification_candidates)} 份候选；'
@@ -1093,7 +1062,7 @@ def match_forms(forms: list[dict]) -> dict:
                 else:
                     reason = (f'规格“{spec}”匹配到 {len(specification_candidates)} 份配比报告，'
                               f'进场工程部位“{entry_location}”未与候选报告部位一致，保留候选供人工核验')
-        mix = candidates[0] if len(candidates) == 1 and not candidate_spec_mismatch else None
+        mix = candidates[0] if len(candidates) == 1 else None
         certificate_links = {
             id(candidate): [certificate for certificate in certificates
                             if _identifiers(candidate) & _identifiers(certificate)]
@@ -1135,7 +1104,7 @@ def match_forms(forms: list[dict]) -> dict:
                 identifiers.update(_identifiers(certificate))
 
         delivery_candidates = [f for f in deliveries if identifiers & _identifiers(f)]
-        ambiguous_mix_selection = not warranty and (len(candidates) > 1 or candidate_spec_mismatch)
+        ambiguous_mix_selection = not warranty and len(candidates) > 1
         delivery_match_rule = 'shared_identifier'
         entry_quantity = inspection.get('quantity_m3', '')
         same_quantity = [candidate for candidate in delivery_candidates
@@ -1153,12 +1122,7 @@ def match_forms(forms: list[dict]) -> dict:
         elif not deliveries:
             delivery_reason = 'PDF 未识别到送货单/小票页，无法匹配送货单或提取小票号作为炉批号'
         elif ambiguous_mix_selection:
-            if candidate_spec_mismatch and delivery_candidates:
-                delivery_reason = ('配比报告候选与进场规格仅自密实标记不同，已保留关联送货单/小票候选；'
-                                   '需人工确认规格后再确定炉批号')
-            elif candidate_spec_mismatch:
-                delivery_reason = ('配比报告候选与进场规格仅自密实标记不同，需人工核验配比报告后再确定质保书编号和送货单')
-            elif delivery_candidates:
+            if delivery_candidates:
                 delivery_reason = (f'规格匹配到 {len(candidates)} 份配比报告，关联到 '
                                    f'{len(delivery_candidates)} 份送货单/小票候选；需人工确认配比报告后再确定炉批号')
             else:

@@ -70,6 +70,11 @@ def value_text(text):
     return '' if normalized(text) in EMPTY else text
 
 
+def use_location_text(text):
+    """Treat uncertain tilde/caret separators as spaces, retaining other text."""
+    return value_text(str(text or '').translate(str.maketrans({'~': ' ', '^': ' ', '～': ' ', '＾': ' '})))
+
+
 def inspection_location_from_remarks(fields, evidence, issues):
     """Use a structural remark only when this inspection row has no location."""
     if not value_text(fields.get('use_location')) and re.search(
